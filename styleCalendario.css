@@ -1,0 +1,44 @@
+#agenda {
+	display: none; /* Inicialmente escondido */
+}
+
+/* Adicione estes estilos no seu arquivo CSS */
+#calendario {
+	display: none; /* Inicialmente escondido */
+	margin-top: 20px;
+}
+
+#tabelaCalendario {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#tabelaCalendario th,
+#tabelaCalendario td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+}
+
+#tituloMesAno {
+	font-size: 18px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.botao {
+	background-color: transparent;
+	border: none;
+	color: #4caf50;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.botao:hover,
+.botao:active {
+	border: 1px solid #4caf50;
+}

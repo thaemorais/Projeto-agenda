@@ -1,122 +1,154 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    display: flex;
-    align-items: stretch;
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f8f8f8;
+	display: flex;
+	align-items: stretch;
 }
 
 .wrapper {
-    display: flex;
-    flex: 1;
+	display: flex;
+	flex: 1;
 }
 
 .barra-lateral {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    width: 20%;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+	background-color: #4caf50;
+	color: #fff;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	width: 20%;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .barra-lateral button {
-    background: none;
-    color: #fff;
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    border: 2px solid transparent;
-    font-size: 16px;
+	background: none;
+	color: #fff;
+	padding: 10px;
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 5px;
+	border: 2px solid transparent;
+	font-size: 16px;
 }
 
 .barra-lateral button:hover,
 .barra-lateral button:active {
-    border: 2px solid #fff;
+	border: 2px solid #fff;
 }
 
 .barra-lateral button:active,
 .barra-lateral button:focus {
-    background-color: #fff;
-    color: #4CAF50;
+	background-color: #fff;
+	color: #4caf50;
 }
 
 .conteudo {
-    flex: 1;
-    padding: 20px;
+	flex: 1;
+	padding: 20px;
 }
 
-.caderno {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 8px;
-    width: 60%;
+.agenda {
+	max-width: 600px;
+	margin: 20px auto;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	border-radius: 8px;
+	width: 60%;
+	display: block;
 }
 
-.data-hoje {
-    font-size: 1.5em;
+#seletorData {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para as opções do seletor */
+#seletorData option {
+    font-size: 14px;
+}
+
+#seletor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.agenda label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
     font-weight: bold;
-    margin-bottom: 15px;
     color: #333;
 }
 
+.data-hoje {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-bottom: 15px;
+	color: #333;
+}
+
 .navegacao {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
 }
 
 .botao {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 5px;
 }
 
 .botao:hover {
-    background-color: #45a049;
+	background-color: #265c29;
 }
 
-.caderno-texto {
-    border: 1px solid #ddd;
-    padding: 10px;
-    min-height: 200px;
-    font-size: 1.2em;
-    line-height: 1.4;
-    border-radius: 5px;
+.agenda-texto {
+	border: 1px solid #ddd;
+	padding: 10px;
+	min-height: 200px;
+	font-size: 1.2em;
+	line-height: 1.4;
+	border-radius: 5px;
 }
 
 .anotacao {
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
 }
 
 /* Estilo para a barra de rolagem na área de anotações */
-.caderno-texto::-webkit-scrollbar {
-    width: 8px;
+.agenda-texto::-webkit-scrollbar {
+	width: 8px;
 }
 
-.caderno-texto::-webkit-scrollbar-thumb {
-    background-color: #4caf50;
-    border-radius: 4px;
+.agenda-texto::-webkit-scrollbar-thumb {
+	background-color: #4caf50;
+	border-radius: 4px;
 }
 
-.caderno-texto::-webkit-scrollbar-track {
-    background-color: #f2f2f2;
+.agenda-texto::-webkit-scrollbar-track {
+	background-color: #f2f2f2;
 }
+
+#calendario {
+    display: none; /* Inicialmente escondido */
+  }
