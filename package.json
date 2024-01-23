@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "flatpickr": "^4.6.13"
+  },
+  "name": "projeto-agenda",
+  "version": "1.0.0",
+  "main": "scriptAgenda.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

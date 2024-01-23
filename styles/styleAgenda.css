@@ -51,9 +51,10 @@ body {
 	padding: 20px;
 }
 
-.agenda {
+#agenda {
+	display: block;
 	max-width: 600px;
-	margin: 20px auto;
+	margin: 10px auto;
 	background-color: #fff;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	padding: 20px;
@@ -62,31 +63,17 @@ body {
 	display: block;
 }
 
-#seletorData {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+#seletor-container p {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #333;
 }
 
-/* Estilo para as opções do seletor */
-#seletorData option {
-    font-size: 14px;
-}
-
-#seletor-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.agenda label{
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
+#data-hoje-container{
+	display: flex;
+	justify-content: center;
 }
 
 .data-hoje {
@@ -119,7 +106,7 @@ body {
 	background-color: #265c29;
 }
 
-.agenda-texto {
+#agenda-texto {
 	border: 1px solid #ddd;
 	padding: 10px;
 	min-height: 200px;
@@ -149,6 +136,26 @@ body {
 	background-color: #f2f2f2;
 }
 
-#calendario {
-    display: none; /* Inicialmente escondido */
-  }
+#calendario{
+	display: none;
+}
+
+/* Estilos para o input do Flatpickr */
+#seletorData.flatpickr-input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 200px;
+    box-sizing: border-box;
+	margin: auto;
+}
+
+/* Centralizar o input do Flatpickr */
+#seletor-container {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+	flex-direction: column;
+    margin-bottom: 10px; 
+}

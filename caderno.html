@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styleAgenda.css" />
+		<link rel="stylesheet" href="styles\styleAgenda.css"/>
+		<link rel="stylesheet" href="node_modules\flatpickr\dist\flatpickr.css"/>
+		<script src="node_modules\flatpickr\dist\flatpickr.js"></script>
+
 		<title>Sua Agenda</title>
 	</head>
 
@@ -13,24 +16,20 @@
 				<button id="botaoAgenda">Agenda</button>
 				<button id="botaoCalendario">Calendário</button>
 				<button id="botaoCompromisso">Compromissos</button>
-                <button id="botaoSair">Sair</button>
+				<button id="botaoSair">Sair</button>
 			</aside>
 
 			<div class="conteudo">
 				<div class="caderno">
 					<!-- Conteúdo principal (agenda) -->
-					<div class="agenda" id="agenda">
-						<div id="seletor-container">
-							<label for="seletorData"
-								>Caso queira selecionar outra data próxima a hoje, escolha
-								aqui:</label
-							>
-							<select id="seletorData" onchange="selecionarData(this.value)">
-								<!-- Opções de data vão aqui -->
-							</select>
+					<div id="agenda">
+						<div id="data-hoje-container">
+							<div id="data-hoje" class="data-hoje"></div>
 						</div>
-						<!-- Exibição da data no topo esquerdo -->
-						<div id="data-hoje" class="data-hoje"></div>
+						<div id="seletor-container">
+							<p>Selecione outra data aqui</p>
+							<input class="flatpickr-input" type="text" id="seletorData" />
+						</div>
 
 						<!-- Botões de navegação -->
 						<div class="navegacao">
@@ -41,6 +40,7 @@
 						<!-- Área para anotações (agenda) -->
 						<div
 							class="agenda-texto"
+							id="agenda-texto"
 							contenteditable="true"
 							placeholder="Escreva suas anotações aqui..."
 						></div>
@@ -49,42 +49,37 @@
 						<button id="botaoSalvar" class="botao">Salvar Anotação</button>
 					</div>
 
-					<div class="calendario" id="calendario">
-						<div class="calendario" id="calendario">
-							<button id="botaoAnteriorCalendario" class="botao">
-								Mês Anterior
-							</button>
-							<button id="botaoProximoCalendario" class="botao">
-								Próximo Mês
-							</button>
+					<div id="calendario">
+						<button id="botaoAnteriorCalendario" class="botao">
+							Mês Anterior
+						</button>
+						<button id="botaoProximoCalendario" class="botao">
+							Próximo Mês
+						</button>
 
-							<table id="tabelaCalendario">
-								<thead>
-									<tr>
-										<th colspan="7" id="tituloMesAno"></th>
-									</tr>
-									<tr>
-										<th>Domingo</th>
-										<th>Segunda</th>
-										<th>Terça</th>
-										<th>Quarta</th>
-										<th>Quinta</th>
-										<th>Sexta</th>
-										<th>Sábado</th>
-									</tr>
-								</thead>
-								<tbody id="corpoCalendario">
-									<!-- Conteúdo do calendário será inserido aqui -->
-								</tbody>
-							</table>
-						</div>
+						<table id="tabelaCalendario">
+							<thead>
+								<tr>
+									<th colspan="7" id="tituloMesAno"></th>
+								</tr>
+								<tr>
+									<th>Domingo</th>
+									<th>Segunda</th>
+									<th>Terça</th>
+									<th>Quarta</th>
+									<th>Quinta</th>
+									<th>Sexta</th>
+									<th>Sábado</th>
+								</tr>
+							</thead>
+							<tbody id="corpoCalendario"></tbody>
+						</table>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Incluindo o arquivo script.js -->
-		<script src="scriptCalendario.js"></script>
-		<script src="scriptAgenda.js"></script>
+		<!-- Incluindo os arquivos script.js -->
+		<script src="scripts\scriptAgenda.js"></script>
 	</body>
 </html>
